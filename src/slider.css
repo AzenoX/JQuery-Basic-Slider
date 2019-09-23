@@ -1,0 +1,148 @@
+/*Importants are used to override Javascript*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html,body{
+    padding: 0;
+    margin: 0;
+}
+#slider-wrapper{
+    border-top: 15px solid #000;
+    border-bottom: 15px solid #000;
+}
+#slider{
+    width: 100%;
+    height: 300px;
+    opacity: 1;
+    padding: 0;
+    margin: 0;
+
+    background: none no-repeat fixed; 
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 0% -150px;
+
+    vertical-align: middle;
+}
+#slider-captions{
+    padding-top: 4% !important;
+}
+#slider-captions, #slider-subtitles{
+    width: auto !important;
+    margin-right: 5% !important;
+    margin-left: 5% !important;
+}
+#slider h1, #slider p{
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 0px 0px #000, 0px 0px 0 #000, 0px 0px 0 #000, 0px 0px 0 #000;
+    position: relative;
+    
+    font-family: 'Montserrat', sans-serif;
+}
+#slider h1{
+    font-size: 3em;
+}
+#slider p{
+    font-size: 1.5em;
+}
+
+#slider img{
+    display: none;
+}
+#slider-indication{
+    display: flex;
+    justify-content: center;
+
+    width: 60vw;
+
+    margin-left: auto;
+    margin-right: auto;
+    
+    /*margin-top: -80px;*/
+}
+#slider-indication .slider-indicator{
+    background-color: #ddd;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 2%;
+    opacity: 0.5;
+}
+#slider-indication .slider-indicator:nth-child(0){
+    background: rgba(0,0,0,0.5);
+}
+
+
+
+.slide-to-right{
+    animation: slide-to-right;
+    text-align: left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 1000ms;
+    opacity: 0;
+}
+.slide-to-right--delayed{
+    animation: slide-to-right;
+    text-align: left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 1200ms;
+    opacity: 0;
+}
+.slide-to-left{
+    animation: slide-to-left;
+    text-align: right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 1000ms;
+    opacity: 0;
+}
+.slide-to-left--delayed{
+    animation: slide-to-left;
+    text-align: right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 1200ms;
+    opacity: 0;
+}
+.slide-fadeout{
+    animation: slide-fadeout;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes slide-fadeout{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes slide-to-right{
+    0%{
+        margin-left: 15%;
+        opacity: 0;
+    }
+    100%{
+        margin-left: 5%;
+        opacity: 1;
+    }
+}
+@keyframes slide-to-left{
+    0%{
+        margin-right: 15%;
+        opacity: 0;
+    }
+    100%{
+        margin-right: 5%;
+        opacity: 1;
+    }
+}
